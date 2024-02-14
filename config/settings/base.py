@@ -42,6 +42,8 @@ LOCALE_PATHS = [str(BASE_DIR / "locale")]
 # DATABASES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
+sqlite_path = str(BASE_DIR / 'everycheese.db')
+
 DATABASES = {
     "default": env.db(
         "DATABASE_URL",
@@ -79,6 +81,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "everycheese.users.apps.UsersConfig",
+    "everycheese.cheeses.apps.CheesesConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
